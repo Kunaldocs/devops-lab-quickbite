@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QuickBite sample food delivery application">
+  <title>QuickBite | Food delivery</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="QuickBite home"><span class="brand-mark">Q</span> QuickBite</a>
+    <span class="delivery-note">Good food, delivered simply.</span>
+    <a class="cart-link" href="#cart">Your cart <span id="cart-count" class="count">0</span></a>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">YOUR LOCAL FOOD PICKS</p>
+        <h1>What sounds<br><span>delicious today?</span></h1>
+        <p class="hero-copy">Explore the menu, build your cart, and try a demo checkout.</p>
+        <a class="primary-link" href="#menu">Explore menu ↓</a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><span>🍔</span><span>🍕</span><span>🥗</span><span>🍜</span></div>
+    </section>
+    <section id="menu" class="section">
+      <div class="section-heading"><div><p class="eyebrow">MADE FOR YOUR CRAVINGS</p><h2>Popular today</h2></div><span class="muted">Sample menu · Prices in ₹</span></div>
+      <div id="menu-grid" class="menu-grid"></div>
+    </section>
+    <section id="cart" class="section cart-section">
+      <div class="section-heading"><div><p class="eyebrow">ALMOST THERE</p><h2>Your cart</h2></div><span class="muted">Review before checkout</span></div>
+      <div class="cart-panel">
+        <div id="cart-items" class="cart-items"><p class="empty-state">Your cart is empty. Add something tasty from the menu.</p></div>
+        <aside class="summary">
+          <h3>Order summary</h3>
+          <div class="summary-line"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+          <div class="summary-line"><span>Delivery fee</span><strong id="delivery">₹0</strong></div>
+          <div class="summary-line total"><span>Total</span><strong id="total">₹0</strong></div>
+          <button id="checkout" class="checkout-button">Place demo order</button>
+          <p id="checkout-message" class="message" role="status" aria-live="polite"></p>
+          <p class="fine-print">Demo only. No payment is collected.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer><span>QuickBite</span><span>DevOps lab demo · Not a real ordering service</span></footer>
+</body>
+</html>
